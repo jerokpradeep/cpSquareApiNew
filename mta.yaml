@@ -1,0 +1,17 @@
+_schema-version: "3.1"
+ID: cpSquareApi
+version: 1.0.0
+modules:
+  - name: cpSquareApi
+    type: java
+    path: .
+    provides:
+    - name: cpSquare_api
+      properties:
+         url: ${default-url}   
+    build-parameters:
+      before-all:
+      - builder: custom
+        commands:
+        - npm install
+        - npm prune --production

@@ -1,0 +1,9 @@
+applications:
+- name: cpSquareApi
+  memory: 2048M
+  instances: 1
+  path: target/cpSquareApi.war  # for QA Testing
+  env:
+    TARGET_RUNTIME: tomee7
+    SET_LOGGING_LEVEL: '{ROOT: INFO, com.sap.cloud.sdk: INFO}'
+    JBP_CONFIG_SAPJVM_MEMORY_SIZES: 'metaspace:2048m..'

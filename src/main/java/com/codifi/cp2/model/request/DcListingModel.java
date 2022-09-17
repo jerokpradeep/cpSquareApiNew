@@ -1,0 +1,30 @@
+package com.codifi.cp2.model.request;
+
+import java.io.Serializable;
+
+public class DcListingModel implements Serializable {
+
+    /**
+     *
+     */
+    private static final long serialVersionUID = 9178661439383356177L;
+    private int id;
+    private String name;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+}

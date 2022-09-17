@@ -1,0 +1,47 @@
+spring:
+  servlet:
+      multipart:
+       max-file-size: 50MB
+       max-request-size: 50MB
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://postgres-9748b83d-350a-4d26-821a-d1bc28e397f6.postgres.database.azure.com:5432/RQucwgWhjdVn?ssl=true&sslmode=require
+    username: 5dbe1fd1f30d
+    password: 98b7d4272fbe
+    #pre-prod
+    #url: jdbc:postgresql://postgres-ad31bdc3-935d-4835-bca6-713b01d7c741.postgres.database.azure.com:5432/rRKikyHWAwji?ssl=true&sslmode=require    
+    #username: 69e951eb5a04    
+    #password: 0137a67b657f
+    hikari:
+      validationTimeout: 600000
+      maximumPoolSize: 20
+      connection-timeout: 60000
+    tomcat:
+      validation-query: SELECT 1
+      test-on-borrow: true
+      validation-interval: 30000
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+      naming:
+       physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    mvc:
+      pathmatch:
+        matching-strategy: ant_path_matcher   
+  application:
+    name: cpSquareService
+    version: 1.0
+  mail:
+    default-encoding: UTF-8
+    host: cpsquared.aldi-sued.com
+    port: 587
+    username: no-reply-dev@cpsquared.aldi-sued.com
+    properties:
+      mail.smtp.auth: false
+      mail.smtp.starttls.enable: false
+appconfig:
+  commons:
+    schemeName: sap_cp2
+  urls:
+    requestNo: 120
